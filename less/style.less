@@ -1,0 +1,542 @@
+/*
+Site: Diamond Web and Design
+Author:Jerson Salazar Méndez
+Updated:March,2016
+Updated by:Jerson Salazar Méndez
+*/
+//import is for import files from resources.less
+@import "resources.less";
+@import "../css/normalize.css";
+
+
+
+/*Mobile Firts*/
+*{
+	font-family: 'Muli', sans-serif;
+	outline: none;
+	a{
+		text-decoration: none!important;
+		list-style: none!important;
+	}
+}
+
+/*Medidas establecidas para separar elementos, estandarizadas*/
+.slide{
+	@{p}:@sizepx - 70 0 @sizepx - 70 0;
+	@{m}:0;
+}
+
+.slide-bottom{
+	@{pb}:@sizepx - 70;
+}
+
+.slide-left{
+	@{pl}:@sizepx - 70;
+}
+
+.pt{
+	@{pt}:@sizepx - 95;
+}
+
+/*End Medidas establecidas para separar elementos, estandarizar*/
+
+
+
+
+
+
+/*Nav*/
+#home{
+	.rounded(@radius:0px);
+	background: @nav-color;
+}
+
+.navbar .nav {
+	> li {
+  text-align: center;
+		}
+} 
+.logo-nav{
+	width:@sizepx/3;
+	height: auto;
+	margin:@sizepx - 85;
+	outline: none;
+}
+
+
+.logo-2{
+	width:@sizepx/3;
+	height: auto;
+	margin:@sizepx - 85;
+	outline: none;
+	&:hover{
+		transform: rotate( -180deg );            
+    	transition: transform 150ms ease;
+    	outline: none;
+	}
+}
+
+.navbar-inverse .navbar-toggle{
+	border:none;
+}
+
+.navbar-default .navbar-toggle{
+	border:none;
+}
+/* End - Nav*/
+
+
+
+/*Sec-home*/
+.logo{
+	position: absolute;
+	margin:@sizepx - 70px 0 @sizepx 0;
+    -webkit-animation:@animation-logo;
+    -moz-animation:@animation-logo;
+    -ms-animation:@animation-logo;
+    -o-animation:@animation-logo;
+    animation:@animation-logo;
+    .opacity(0);
+    top:@sizepx - 80;  
+    z-index:@z-i;
+}
+
+#img-cel{
+	position: absolute;
+	top:@zero;
+}
+
+.video{
+	z-index:@z-i - 999;
+	@{mt}: @zero;
+}
+
+.embed-responsive-16by9 {
+    @{pb}:@sizepx -50;
+    top: @sizepx - 120px;
+}
+.embed-responsive {
+    position: absolute;
+    display: block;
+    height: auto;
+    @{p}:@zero;
+    overflow: hidden;
+}
+
+.scroll{
+	color: @body-color;
+}
+/*End Sec-home*/
+
+
+
+/*Sec-About Us-*/
+.h-about{
+	background: @nav-color;
+	color:@body-color;
+	@{m}:@sizepx - 120 @zero @zero @zero ;
+}
+
+.img-about{
+	width: 100%;
+	height:@sizepx * 2;
+}
+
+#about{
+	background-color:@body-color;
+	color:@nav-color;
+	@{m}:@zero;
+}
+
+.blue{
+	color:@blue;
+}
+
+.h{
+	background:@nav-color;
+	color:@body-color;	
+}
+
+.face-team,.behance{
+	@{p}: @sizepx / 2 @sizepx - 90 @sizepx / 2 @sizepx - 90;
+}
+
+
+.pad-title{
+	@{pt}:@sizepx - 70 ;
+}
+
+.social{
+	color: @nav-color;
+}
+
+.social-2{
+	color: @body-color;
+	&:hover{
+		color:@blue;
+		transition: color 0.8s linear 0.2s;
+	}
+}
+/*End Sec-About Us*/
+
+
+
+/*Sec Offert*/
+.h-text-offert{
+	font-size:@font;
+}
+
+.set-height{
+	.border-s();
+	background:@bg-gray;
+}
+
+.s-1{
+	width:@sizepx;
+	height:@sizepx;
+	padding-bottom:@sizepx * 2;
+	background:@bg-gray1;
+	color:@body-color;
+}
+
+.s-2:extend(.s-1) {
+	background:@bg-gray2;
+}
+.s-3:extend(.s-1) {
+	background:@bg-gray3;
+}
+/*End Sec Offert*/
+
+
+
+
+
+
+/*Sec brand*/
+.text-brand{
+	@{p}:@sizepx / 2 @zero @sizepx / 2 @zero;
+}
+
+.text-header-brand{
+	padding-bottom:@sizepx / 2;
+	margin: 0px;
+	font-size:@font - 3;
+}
+
+.title-brand{
+	font-size:@font + 7;
+}
+
+.pad-img{
+	@{p}:@sizepx / 2 0;
+}
+
+.title-offert{
+	@{p}:@sizepx - 70 @zero @sizepx - 70 @zero;
+}
+
+.btn {
+	margin-left:@zero;
+	width:@sizepx + 73;
+	height:@sizepx - 55;
+	border: 0;
+	background-color:@blue;
+		&.primary, &.secondary{
+	    	color:white;
+	    	.rounded();
+	    }
+}
+
+
+.home123:hover{
+	cursor: pointer;
+	transform:scale(1.1);
+    -ms-transform:scale(1.1); 
+    -moz-transform:scale(1.1); 
+    -webkit-transform:scale(1.1); 
+    -o-transform:scale(1.1); 
+    -webkit-transition: all 500ms ease-in-out; 
+    -moz-transition: all 500ms ease-in-out; 
+    -ms-transition: all 500ms ease-in-out; 
+    -o-transition: all 500ms ease-in-out; 
+    .opacity(0.8);
+}
+
+.face:hover,.twitter:hover,.scroll:hover,.behance:hover{
+	color:@blue;
+	cursor: pointer;
+	transition: color 0.8s linear 0.2s;
+}
+/*End Sec brand*/
+
+
+
+
+
+/*Contact*/
+.bg-contact{
+	background-color:@nav-color;
+	background-image: url('@{rutaBaseImg}ctt.jpg');
+	background-size: cover;
+}
+
+label {
+	width:@sizepx + 40;	
+	padding:4px;
+}
+
+input {
+	width:@sizepx + 40;
+	padding: 4px;
+	margin: 5px 5px;
+}
+
+#form-submit{
+	background-color:transparent;
+	color:@body-color;
+	.rounded();
+	border:none;
+	margin:5px 10px 30px 10px;
+	width:@sizepx;
+	outline: none;
+	&:hover{
+		background-color:@blue;
+		transition: color 0.8s linear 0.2s;
+		outline: none;
+	}
+}
+
+#form-reset:extend(#form-submit){
+	&:hover{
+		background-color:@blue;
+		transition: color 0.8s linear 0.2s;
+		outline: none;
+	}
+}
+
+#name,#email,#message{
+	background-color: transparent;
+	background-image: none;
+	color:white;
+	border: 1px solid @blue;
+}
+
+.c{
+	color:white;
+}
+/*End contact*/
+
+
+
+
+/*footer*/
+footer{
+	background-color: @nav-color;
+	color:@body-color;
+}
+/*End footer*/
+
+
+
+
+
+/*Animation*/
+@-webkit-keyframes logo {.frames-logo;}
+@-moz-keyframes logo {.frames-logo;}
+@-ms-keyframes logo {.frames-logo;}
+@-o-keyframes logo {.frames-logo;}
+@keyframes logo {.frames-logo;}
+
+	.frames-logo () {
+	0%{
+		.opacity(0);
+		-webkit-transform: scale(@zero);
+		-moz-transform: scale(@zero);
+		-ms-transform: scale(@zero);
+		-o-transform: scale(@zero);
+		transform: scale(@zero);
+	}
+	25%{
+		.opacity(0);
+		-webkit-transform: scale(@zero);
+		-moz-transform: scale(@zero);
+		-ms-transform: scale(@zero);
+		-o-transform: scale(@zero);
+		transform: scale(@zero);
+	}
+
+	75%{
+		.opacity();
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		-o-transform: scale(0.5);
+		transform: scale(0.5);
+	}
+
+	100%{
+		.opacity(1);
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+/*Media Query*/
+/*Media sm*/
+@media @screen-sm-table {
+	
+	.scroll {
+	    top: @porc - 20%;
+	    left: @porc - 53%;
+	    position: absolute;
+	    z-index:@z-i - 1;
+	    -webkit-animation:@animation;
+	    -moz-animation:@animation;
+	    -ms-animation:@animation;
+	    -o-animation:@animation;
+	    animation:@animation;
+	}
+
+	.text-offert{
+		font-size: 30px;
+		top:50px;
+	}
+
+	.title-offert{
+	font-size:16px;
+	}
+
+	.title-brand{
+	font-size: 35px;
+	@{p}:@sizepx / 2 0 @sizepx  0;
+	}
+
+
+	
+	/*Animation sm*/
+	@-webkit-keyframes scrol {.frames-sm;}
+	@-moz-keyframes scrol {.frames-sm;}
+	@-ms-keyframes scrol {.frames-sm;}
+	@-o-keyframes scrol {.frames-sm;}
+	@keyframes scrol {.frames-sm;}
+
+	.frames-sm () {
+	from {top:@porc - 20%;}
+	to {top:@porc - 18%;}
+}}/*End Media sm*/
+
+/*Media md*/	
+@media @screen-md-desktop {
+
+	.info-team{
+		@{mt}:@sizepx - 80px;
+	}
+	video::-webkit-media-controls {
+		display:none !important; 
+	}
+
+	.scroll {
+	    top:@porc - 30%;
+	    left:@porc - 52%;
+	    position: absolute;
+	    z-index: 999;
+	    -webkit-animation:@animation;
+	    -moz-animation:@animation;
+	    -ms-animation:@animation;
+	    -o-animation:@animation;
+	    animation:@animation;
+	}
+
+	.diamond-about-logo{
+		@{m}:@sizepx / 2 0 0 @sizepx - 50px;
+		height: auto;
+		width: @sizepx * 3 + 70px;
+	}
+
+	.row-about{
+		@{pt}:@sizepx / 2;
+	}
+
+	#team{
+		@{mt}:@sizepx - 70;
+	}
+	
+	.text-offert{
+		font-size:@sizepx - 70;
+		top:@sizepx / 2;
+	}
+
+	.text-header-brand{
+	font-size:@sizepx - 75;
+	}
+
+	.title-brand{
+	font-size:@sizepx - 65;
+	@{p}:@sizepx / 2 0 @sizepx  0;
+	}
+
+	.jerson{
+		@{pt}:@sizepx - 20;
+	}
+
+	
+	/*Animation md*/
+	@-webkit-keyframes scrol {.frames;}
+	@-moz-keyframes scrol {.frames;}
+	@-ms-keyframes scrol {.frames;}
+	@-o-keyframes scrol {.frames;}
+	@keyframes scrol {.frames;}
+
+	.frames () {
+	from {top:@porc - 30%;}
+	to {top:@porc - 28%;}
+	}}/*End Media md*/
+
+
+/*Media lg*/
+@media @screen-lg-long-desktop {
+	.scroll {
+	    top:@porc - 35%;
+	    left:@porc - 52%;
+	    position: absolute;
+	    z-index:@z-i - 1;
+	    -webkit-animation:@animation;
+	    -moz-animation:@animation;
+	    -ms-animation:@animation;
+	    -o-animation:@animation;
+	    animation:@animation;   
+	}
+
+	.text-offert{
+		top:@sizepx + 40px;
+	}
+
+	.text-header-brand{
+	font-size: 30px;
+	}
+
+	.title-brand{
+	font-size: 35px;
+	@{p}:@sizepx / 2 0 @sizepx  0;
+	}
+
+	.jerson{
+		@{p}:@sizepx - 20 0 @sizepx @sizepx;
+	}
+
+
+	
+	/*Animation lg*/
+	@-webkit-keyframes scrol {.mixi-frames;}
+	@-moz-keyframes scrol {.mixi-frames;}
+	@-ms-keyframes scrol {.mixi-frames;}
+	@-o-keyframes scrol {.mixi-frames;}
+	@keyframes scrol {.mixi-frames;}
+
+	.mixi-frames () {
+	from {top:@porc - 35%;}
+	to {top:@porc - 33%;}
+}}/*End Media lg*/
